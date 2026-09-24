@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt # Native import to help the visualizer agent sta
 from dotenv import load_dotenv
 from groq import Groq
 
+import matplotlib
+matplotlib.use('Agg') # 🛡️ CRITICAL SAFESTACK: Forces headless image compiling, stopping asyncio freezes on Python 3.14!
+
 load_dotenv()
 
 # ==========================================
